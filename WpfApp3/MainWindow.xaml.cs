@@ -15,19 +15,19 @@ using System.Windows.Shapes;
 
 namespace WpfApp3
 {
-    /// <summary>
-    /// Interakční logika pro MainWindow.xaml
-    /// </summary>
+    
     public partial class MainWindow : Window
     {
         public MainWindow()
         {
             InitializeComponent();
 
-            int Rows = 5;
+            int Rows = 15;
             int Columns = 10;
             grid.Rows = Rows;
             grid.Columns = Columns;
+
+
             for (int y = 0; y < Rows; y++)
             {
                 for (int i = 0; i < Columns; i++)
