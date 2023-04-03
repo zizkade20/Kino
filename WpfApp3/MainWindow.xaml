@@ -20,6 +20,9 @@
 
         </UniformGrid>
         <TextBox HorizontalAlignment="Center"  Margin="0,10,0,0" TextWrapping="Wrap" Text="Plátno" VerticalAlignment="Top" Width="528" Height="22" Background="#FFD6D6D6"/>
+        <Popup Name="myPopup" Width="200" Height="100" Placement="Center" >
+            <!-- Add content to the popup, such as a TextBlock or Button -->
+        </Popup>
     </Grid>
 
 </Window>
