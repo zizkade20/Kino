@@ -26,7 +26,7 @@ namespace WpfApp3
             InitializeComponent();
 
             int Rows = 10;
-            int Columns = 5;
+            int Columns = 7;
             grid.Rows = Rows;
             grid.Columns = Columns;
 
@@ -42,7 +42,7 @@ namespace WpfApp3
                         Tag = i
                     };
                     button.Margin = new Thickness(0, 15, 0, 0);
-                    button.Background = Brushes.Red;
+                    button.Background = Brushes.LightGreen;
                     button.Click += new RoutedEventHandler(button_Click);
 
                     
@@ -53,22 +53,35 @@ namespace WpfApp3
         }
         void button_Click(object sender, RoutedEventArgs e)
         {
-            /*
-             * POP UP
-            myPopup.PlacementTarget = sender as UIElement;
-            myPopup.IsOpen = true;
-            */
-            Button button = sender as Button;
             
-            if (button.Background == Brushes.Red)
+            
+            Button button = sender as Button;
+            /*
+            if (button.Background == Brushes.LightGreen)
+            {
+                button.Background = Brushes.Gold;
+            } 
+            else if (button.Background == Brushes.Gold)
             {
                 button.Background = Brushes.LightGreen;
-            } 
-            else if (button.Background == Brushes.LightGreen)
-            {
-                button.Background = Brushes.Red;
             }
+            */
+
+            Window1 window1 = new Window1();
+            window1.Show();
+            
+            /*
+            Label stavLabel = new Label();
+            stavLabel.Content = "Volno";
+            stavLabel.Foreground = Brushes.Green;
+            stavLabel.HorizontalAlignment = HorizontalAlignment.Center;
+            stavLabel.VerticalAlignment = VerticalAlignment.Top;
+            */
+
+
+
         }
+       
 
     }
 }

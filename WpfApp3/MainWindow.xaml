@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp3"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="550" Width="800">
     <Grid>
 
         <UniformGrid Name="grid" RenderTransformOrigin="0.5,0.5" Margin="10,53,9,1">
@@ -19,10 +19,8 @@
             </UniformGrid.RenderTransform>
 
         </UniformGrid>
-        <TextBox HorizontalAlignment="Center"  Margin="0,10,0,0" TextWrapping="Wrap" Text="Plátno" VerticalAlignment="Top" Width="528" Height="22" Background="#FFD6D6D6"/>
-        <Popup Name="myPopup" Width="200" Height="100" Placement="Center" >
-            <!-- Add content to the popup, such as a TextBlock or Button -->
-        </Popup>
+        <TextBox HorizontalAlignment="Center" IsReadOnly="True" Margin="0,10,0,0" TextWrapping="Wrap" Text="Plátno" VerticalAlignment="Top" Width="528" Height="22" Background="#FFD6D6D6"/>
+        
     </Grid>
 
 </Window>
