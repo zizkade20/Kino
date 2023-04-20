@@ -7,6 +7,8 @@
         mc:Ignorable="d"
         Title="Window2" Height="450" Width="800">
     <Grid>
-        <ListView></ListView>
+        <ListView>
+            
+        </ListView>
     </Grid>
 </Window>

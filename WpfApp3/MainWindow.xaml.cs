@@ -41,12 +41,13 @@ namespace WpfApp3
                         
                         Tag = i
                     };
-                    button.Margin = new Thickness(0, 15, 0, 0);
                     button.Background = Brushes.LightGreen;
                     button.Click += new RoutedEventHandler(button_Click);
+                    button.Margin = new Thickness(0, 15, 0, 0);
 
                     
                     this.grid.Children.Add(button);
+                    button.Name = "button_" + y + "_" + i;
                 }
             }
 
@@ -56,6 +57,9 @@ namespace WpfApp3
             
             
             Button button = sender as Button;
+            Button batn = (Button)sender;
+
+            string buttonContent = batn.Content.ToString(); 
             /*
             if (button.Background == Brushes.LightGreen)
             {
@@ -67,7 +71,7 @@ namespace WpfApp3
             }
             */
 
-            Window1 window1 = new Window1();
+            Window1 window1 = new Window1(buttonContent);
             window1.Show();
             
             /*

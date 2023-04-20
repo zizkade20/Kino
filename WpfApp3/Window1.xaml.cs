@@ -14,19 +14,18 @@ using System.Windows.Shapes;
 
 namespace WpfApp3
 {
-    /// <summary>
-    /// Interakční logika pro Window1.xaml
-    /// </summary>
+    
     public partial class Window1 : Window
     {
-        public Window1()
+        public string Hovnajs { get; set; }
+        public Window1(String Hovnajs)
         {
             InitializeComponent();
-        }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
+            this.Hovnajs = Hovnajs;
+            string[] pozice = Hovnajs.Split('_');
 
+            SedackaLabel.Content = pozice[0] + pozice[1];
         }
     }
 }
