@@ -17,9 +17,7 @@ using Newtonsoft.Json;
 
 namespace WpfApp3
 {
-    /// <summary>
-    /// Interakční logika pro Window2.xaml
-    /// </summary>
+ 
     public partial class Window2 : Window
     {
         public Window2()
@@ -30,9 +28,7 @@ namespace WpfApp3
         {
             var path = @"../../../diar.json";
 
-            // získání dat z jsonu
-            string json = File.ReadAllText(path);
-            // deserializace dat z jsonu do listu
+            //string json = File.ReadAllText(path);
             // var dataList = JsonConvert.DeserializeObject<List<Window2>>(json);
 
 
