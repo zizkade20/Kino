@@ -59,8 +59,7 @@ namespace WpfApp3
             Button button = sender as Button;
             Button batn = (Button)sender;
 
-            string buttonContent = batn.Content.ToString(); 
-            /*
+            
             if (button.Background == Brushes.LightGreen)
             {
                 button.Background = Brushes.Gold;
@@ -69,9 +68,9 @@ namespace WpfApp3
             {
                 button.Background = Brushes.LightGreen;
             }
-            */
+            
 
-            Window1 window1 = new Window1(buttonContent);
+            Window1 window1 = new Window1(batn.Name);
             window1.Show();
             
             /*

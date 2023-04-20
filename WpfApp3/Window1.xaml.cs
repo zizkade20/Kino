@@ -22,10 +22,18 @@ namespace WpfApp3
         {
             InitializeComponent();
 
+            
             this.Hovnajs = Hovnajs;
             string[] pozice = Hovnajs.Split('_');
 
-            SedackaLabel.Content = pozice[0] + pozice[1];
+            SedackaLabel.Content = "řada " + pozice[1] + "  sedadlo " + pozice[2];
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            // ulozeni do db
+            this.Close();
+        }
+        
     }
 }
