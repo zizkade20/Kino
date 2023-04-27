@@ -18,6 +18,7 @@ namespace WpfApp3
     
     public partial class Window1 : Window
     {
+        public string Hovnajs { get; set; }
         private static Database _data;
         public static Database Data
         {
@@ -34,7 +35,7 @@ namespace WpfApp3
         {
             InitializeComponent();
 
-            /*
+            /*  
             this.Data = Hovnajs;
             string[] pozice = Hovnajs.Split('_');
 
