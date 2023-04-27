@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.Contracts;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,22 +18,43 @@ namespace WpfApp3
     
     public partial class Window1 : Window
     {
-        public string Hovnajs { get; set; }
+        private static Database _data;
+        public static Database Data
+        {
+            get 
+            {
+                if(_data == null)
+                {
+                    _data = new Database("avenger.db3");
+                }
+                return _data;
+            } 
+        }
         public Window1(String Hovnajs)
         {
             InitializeComponent();
 
-            
-            this.Hovnajs = Hovnajs;
+            /*
+            this.Data = Hovnajs;
             string[] pozice = Hovnajs.Split('_');
 
             SedackaLabel.Content = "řada " + pozice[1] + "  sedadlo " + pozice[2];
+            */
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             // ulozeni do db
-            this.Close();
+
+            Avenger avenger = new Avenger()
+            {
+                Name = t1.Text,
+                PublicName = t2.Text,
+            };
+            Data.SaveItemAsync(avenger);
+            t1.Text = "";
+            t2.Text = "";
+            //this.Close();
         }
         
     }

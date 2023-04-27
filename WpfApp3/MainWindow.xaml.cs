@@ -56,21 +56,10 @@ namespace WpfApp3
         {
             
             
-            Button button = sender as Button;
-            Button batn = (Button)sender;
-
-            
-            if (button.Background == Brushes.LightGreen)
-            {
-                button.Background = Brushes.Gold;
-            } 
-            else if (button.Background == Brushes.Gold)
-            {
-                button.Background = Brushes.LightGreen;
-            }
+            Button button = (Button)sender;
             
 
-            Window1 window1 = new Window1(batn.Name);
+            Window1 window1 = new Window1(button.Name);
             window1.Show();
             
             /*

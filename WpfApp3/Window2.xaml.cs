@@ -13,7 +13,9 @@ using System.Windows.Markup;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+
 using Newtonsoft.Json;
+using System.IO;
 
 namespace WpfApp3
 {
@@ -26,10 +28,10 @@ namespace WpfApp3
         }
         public void PrintJson(string when)
         {
-            var path = @"../../../diar.json";
+            var path = @"../../../filmy.json";
 
-            //string json = File.ReadAllText(path);
-            // var dataList = JsonConvert.DeserializeObject<List<Window2>>(json);
+            string json = File.ReadAllText(path);
+            var dataList = JsonConvert.DeserializeObject<List<Window2>>(json);
 
 
         }

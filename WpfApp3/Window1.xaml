@@ -7,13 +7,14 @@
         mc:Ignorable="d"
         Title="Window1" Height="450" Width="800">
     <Grid>
-        <TextBox HorizontalAlignment="Center" Margin="0,184,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="180" Height="38"/>
+        <TextBox x:Name="t1" HorizontalAlignment="Center" Margin="0,184,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="180" Height="38"/>
         <Label Content="jméno" HorizontalAlignment="Left" Margin="222,191,0,0" VerticalAlignment="Top" Height="24" Width="50"/>
         <Label Content="e-mail" HorizontalAlignment="Left" Margin="222,240,0,0" VerticalAlignment="Top" Height="26" Width="42"/>
-        <TextBox HorizontalAlignment="Center" Margin="0,234,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="180" Height="38"/>
-        <Button Content="Zarezervovat" HorizontalAlignment="Left" Margin="658,315,0,0" VerticalAlignment="Top" Height="35" Width="81" Click="Button_Click"/>
+        <TextBox x:Name="t2" HorizontalAlignment="Center" Margin="0,234,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="180" Height="38"/>
+        
         <Label Content="Vytvořte rezervaci zde:" HorizontalAlignment="Center" Margin="0,124,0,0" VerticalAlignment="Top"/>
         <Label Content="Číslo sedačky" x:Name="SedackaLabel" HorizontalAlignment="Center" Margin="0,44,0,0" VerticalAlignment="Top" Height="34" Width="129" FontSize="15"/>
+        <Button Content="Zarezervovat" HorizontalAlignment="Left" Margin="658,315,0,0" VerticalAlignment="Top" Height="35" Width="81" Click="Button_Click"/>
 
     </Grid>
 </Window>
